@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dancing+Script:wght@500&family=Poppins:ital,wght@1,300&family=Roboto:wght@100&display=swap');
+*{
+    margin: 0;
+    font-family: Poppins;
+    border: border-box;
+    padding: 0;
+}
+.navbar1{
+    height: 110px;
+    background-color: #0f1111;
+    color: white;
+}
+.nav-logo{
+    height: 80px;
+    width: 100px;
+}
+.logo{
+    background-image: url("Atitech-12-28-2023.png");
+    height: 50px;
+    background-size: cover;
+    width: 150%;
+    color: blue;
+    font-size: xx-large;
+}
+
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+.navbar a:hover::before{
+    width: 100%;
+}
+
+
+
+h1{
+    color: rgb(250, 249, 252);
+    background-image: url(back1.jpg);
+    display: grid;
+    place-items: center;
+}
+h3{
+    color: rgb(250, 249, 252);
+    background-image: url(back1.jpg);
+    display: grid;
+    place-items: center;
+}
+.hello{
+    color: #0f275c;
+    display: grid;
+    place-items: center;
+}
+.price{
+    font-size: 50px;
+    display: grid;
+    place-items: center;
+}
+h4{
+    display: grid;
+    place-items: center;
+}
+.rupees{
+    color: rgb(145, 137, 137);
+}
+.note{
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: rgb(243, 81, 52);
+}
+.sample{
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    border: 1px solid #b0ddfc;
+    background-color: #bfd2fc;
+}
+.question1{
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+}
+
+
+
+
+section{
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(29, 87%, 76%);
+    border: 1px solid white;
+}
+.faq{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question h4{
+    font-size: 1.8rem;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active svg{
+    transform: rotate(180deg);
+}
+svg{
+    transition: transform 0.5s ease-in;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* atitech.css */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    animation: fadeIn 1s ease-in;
+}
+
+.type {
+    animation: slideIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+.hello, .price, .sample, .question1 {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.faq {
+    animation: slideIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.faq:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+.faq:nth-child(odd) {
+    animation-delay: 0.25s;
+}
